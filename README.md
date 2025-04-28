@@ -35,7 +35,7 @@ This is a **Spring Boot + Thymeleaf** based web application to fetch and display
 - **Thymeleaf**
 - **HTML + CSS**
 - **NewsAPI.org** (for fetching news)
-- **MySQL / H2 Database**
+- **MySQL  Database**
 
 ---
 
