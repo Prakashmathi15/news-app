@@ -51,4 +51,4 @@ This is a **Spring Boot + Thymeleaf** based web application to fetch and display
 ## 🛠️ Setup Instructions
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/news-app.git
+   git clone https://github.com/Prakashmathi15/news-app.git
