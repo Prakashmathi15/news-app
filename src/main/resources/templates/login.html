@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login - News Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+<div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
+    <h2 class="text-2xl font-semibold text-center mb-6 text-blue-600">Welcome Back</h2>
+
+    <form th:action="@{/login}" method="post" class="space-y-4">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+        <div>
+            <label class="block text-gray-700">Username</label>
+            <input type="text" name="username" class="w-full border border-gray-300 p-2 rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+        <div>
+            <label class="block text-gray-700">Password</label>
+            <input type="password" name="password" class="w-full border border-gray-300 p-2 rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-400">
+        </div>
+        <div th:if="${param.error}" class="text-red-500 text-sm">
+            Invalid username or password
+        </div>
+        <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-300">
+            Log In
+        </button>
+    </form>
+
+    <div class="mt-4 text-center text-sm text-gray-600">
+        Don’t have an account? <a href="/register" class="text-blue-500 hover:underline">Register</a>
+    </div>
+</div>
+</body>
+</html>
