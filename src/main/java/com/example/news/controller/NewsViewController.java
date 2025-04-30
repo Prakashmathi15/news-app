@@ -16,7 +16,8 @@ public class NewsViewController {
     private NewsRepository newsRepository;
 
     // All News
-    @GetMapping({"/", "/news/all"})
+
+    @GetMapping("/news/all")
     public String allNews(Model model) {
         List<News> all = newsRepository.findAll();
         model.addAttribute("newsList", all);
